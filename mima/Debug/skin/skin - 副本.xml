@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="600,371" sizebox="4,4,4,4" caption="0,0,0,32" mininfo="200,160">
+    <Font id="2" name="微软雅黑blod" size="12" bold="false" italic="false" />
+    <Font id="4" name="微软雅黑blod" size="18" bold="false" italic="false" textcolor="#FF000000"/>
+    <VerticalLayout enabled="true" bkcolor="#FFF0F0F0" bkcolor2="#FFAAAAA0">
+        <HorizontalLayout enabled="true" height="30" bkimage="head_bk.png">
+            <VerticalLayout enabled="true" width="100">
+                <Option name="help" text="帮助" float="true" pos="10,0,0,0" enabled="true" width="25" height="30" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" font="2" align="center" />
+                <Option name="worker" text="开发人员" float="true" pos="50,0,0,0" enabled="true" width="50" height="30" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" font="2" align="center" />
+            </VerticalLayout>
+            <VerticalLayout enabled="true" />
+            <VerticalLayout enabled="true" width="78">
+                <Button name="minbtn" tooltip="最小化" float="true" pos="0,5,0,0" enabled="true" width="18" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage=" file=&apos;MinNormal.png&apos; " hotimage=" file=&apos;MinFocus.png&apos; " pushedimage=" file=&apos;MinFocus.png&apos; " />
+                <Button name="maxbtn" tooltip="最大化" float="true" pos="27,5,0,0" enabled="true" width="18" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage=" file=&apos;MaxNormal.png&apos; " hotimage=" file=&apos;MaxFocus.png&apos; " pushedimage=" file=&apos;MaxFocus.png&apos; " />
+                <Button name="restorebtn" tooltip="还原" visible="false" float="true" pos="27,5,0,0" enabled="true" width="18" height="18" align="center" normalimage=" file=&apos;StoreNormal.bmp&apos; " hotimage=" file=&apos;StoreFocus.bmp&apos; " pushedimage=" file=&apos;StoreFocus.bmp&apos; " />
+                <Button name="closebtn" tooltip="关闭" float="true" pos="54,5,0,0" enabled="true" width="18" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage=" file=&apos;CloseNormal.png&apos; " hotimage=" file=&apos;CloseFocus.png&apos; " pushedimage=" file=&apos;CloseFocus.png&apos; " />
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout enabled="true">
+            <VerticalLayout enabled="true" width="144" bkimage="side_bkgrond.png" >
+                <Option name="gcd" text="最大公约数" float="true" pos="0,20,0,0" enabled="true"  width="144" height="30" font="2" align="center" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" group="contenttab" selectedimage="tabbar_pushed.png" />
+                <Option name="mod_1" text="元素逆元" float="true" pos="0,50,0,0" enabled="true" width="144" height="30" font="2" align="center" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" group="contenttab" selectedimage="tabbar_pushed.png" />
+                <Option name="mod_2" text="模指数" float="true" pos="0,80,0,0" enabled="true" width="144" height="30" font="2" align="center" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" group="contenttab" selectedimage="tabbar_pushed.png" />
+                <Option name="mod_3" text="仿射加密" float="true" pos="0,110,0,0" enabled="true" width="144" height="30" font="2" align="center" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" group="contenttab" selectedimage="tabbar_pushed.png" />
+                <Option name="DES" text="DES" float="true" pos="0,140,0,0" enabled="true" width="144" height="30" font="2" align="center" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" group="contenttab" selectedimage="tabbar_pushed.png" />
+                <Option name="RSA" text="RSA" float="true" pos="0,170,0,0" enabled="true" width="144" height="30" font="2" align="center" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" group="contenttab" selectedimage="tabbar_pushed.png" />
+                <Option name="SHA" text="HASH函数" float="true" pos="0,200,0,0" enabled="true" width="144" height="30" font="2" align="center" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" group="contenttab" selectedimage="tabbar_pushed.png" />
+                <Option name="RSA_2" text="RSA数字签名" float="true" pos="0,230,0,0" enabled="true" width="144" height="30" font="2" align="center" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" group="contenttab" selectedimage="tabbar_pushed.png" />
+            </VerticalLayout>
+			<VerticalLayout enabled="true" bkimage="background.png">
+				<TabLayout name="switch" enabled="true" >
+					<HorizontalLayout enabled="true">
+						<Text text="输入数据A：" float="true" pos="18,103,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="gcd_input_1" float="true" pos="130,103,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" />
+						<Text text="输入数据B：" float="true" pos="18,203,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="gcd_input_2" float="true" pos="130,203,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" />
+						<Text text="它们的最大公约数：" float="true" pos="18,303,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap"/>
+						<Edit name="gcd_output"float="true" pos="130,313,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4"/>
+						<Button name="gcd_ensure" text="确认" float="true" pos="244,362,0,0" enabled="true" width="89" height="33" textcolor="#FF386382" disabledtextcolor="#FFA7A6AA" font="2" align="center" normalimage="button_normal.png" hotimage="button_hover.png" pushedimage="button_pushed.png" group="contenttab" selectedimage="button_pushed.png" />
+					</HorizontalLayout>
+					<HorizontalLayout enabled="true">
+						<Text text="输入数据A：" float="true" pos="18,103,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="mod_input_1" float="true" pos="130,103,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+						<Text text="输入模数B：" float="true" pos="18,203,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="mod_input_2" float="true" pos="130,203,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+						<Text text="A关于模B的逆元是：" float="true" pos="18,303,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="mod_output"float="true" pos="130,313,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+						<Button name="mod_ensure" text="确认" float="true" pos="244,362,0,0" enabled="true" width="89" height="33" textcolor="#FF386382" disabledtextcolor="#FFA7A6AA" font="2" align="center" normalimage="button_normal.png" hotimage="button_hover.png" pushedimage="button_pushed.png" group="contenttab" selectedimage="button_pushed.png" />
+					</HorizontalLayout>
+					<HorizontalLayout enabled="true">
+						<Text text="输入数据A：" float="true" pos="18,100,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="Mod_input_1" float="true" pos="130,100,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+						<Text text="输入A的指数B：" float="true" pos="18,180,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="Mod_input_2" float="true" pos="130,180,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+						<Text text="输入模数C：" float="true" pos="18,260,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="Mod_input_3"float="true" pos="130,260,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+						<Text text="A的B次方关于C取模：" float="true" pos="18,340,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="Mod_output"float="true" pos="130,340,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+						<Button name="Mod_ensure" text="确认" float="true" pos="244,390,0,0" enabled="true" width="89" height="33" textcolor="#FF386382" disabledtextcolor="#FFA7A6AA" font="2" align="center" normalimage="button_normal.png" hotimage="button_hover.png" pushedimage="button_pushed.png" group="contenttab" selectedimage="button_pushed.png" />
+					</HorizontalLayout>
+					<HorizontalLayout enabled="true">
+						<Text text="输入待加密数据X：" float="true" pos="18,103,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="MOD_input_1" float="true" pos="130,103,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+						<Text text="输入待解密数据Y：" float="true" pos="18,203,0,0" enabled="true" width="110" height="70" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="4" align="wrap" />
+						<Edit name="MOD_input_2" float="true" pos="130,203,0,0" enabled="true" width="200" height="20" bkcolor="#FFFFFFFF" bordercolor="#00C6CFD8" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+						<Button name="MOD_jiami" text="加密" float="true" pos="244,362,0,0" enabled="true" width="89" height="33" textcolor="#FF386382" disabledtextcolor="#FFA7A6AA" font="2" align="center" normalimage="button_normal.png" hotimage="button_hover.png" pushedimage="button_pushed.png" group="contenttab" selectedimage="button_pushed.png" />
+						<Button name="MOD_jiemi" text="解密" float="true" pos="122,362,0,0" enabled="true" width="89" height="33" textcolor="#FF386382" disabledtextcolor="#FFA7A6AA" font="2" align="center" normalimage="button_normal.png" hotimage="button_hover.png" pushedimage="button_pushed.png" group="contenttab" selectedimage="button_pushed.png" />
+					</HorizontalLayout>
+					<HorizontalLayout enabled="true">
+						<Text text="DES/AES" float="true" pos="200,100,0,0" enabled="true" width="100" height="100" relativepos="50,50,0,0" textpadding="2,0,2,0" font="4" align="wrap" />
+					</HorizontalLayout>
+					<HorizontalLayout enabled="true">
+						<Text text="RSA" float="true" pos="200,100,0,0" enabled="true" width="100" height="100" relativepos="50,50,0,0" textpadding="2,0,2,0" font="4" align="wrap" />
+					</HorizontalLayout>
+					<HorizontalLayout enabled="true">
+						<Text text="SHA-1" float="true" pos="200,100,0,0" enabled="true" width="100" height="100" relativepos="50,50,0,0" textpadding="2,0,2,0" font="4" align="wrap" />
+					</HorizontalLayout>
+					<HorizontalLayout enabled="true">
+						<Text text="基于RSA的数字签名" float="true" pos="200,100,0,0" enabled="true" width="100" height="100" relativepos="50,50,0,0" textpadding="2,0,2,0" font="4" align="wrap" />
+					</HorizontalLayout>
+					<HorizontalLayout enabled="true">
+						<Text text="我认为这么简单一看就懂不需要帮助，Bye~" float="true" pos="18,100,0,0" enabled="true" width="300" height="300" relativepos="50,50,0,0" textpadding="2,0,2,0" font="4" align="wrap" />
+					</HorizontalLayout>
+					<HorizontalLayout enabled="true">
+						<Text text="算法实现：黄子沫、廖贝尔" float="true" pos="18,100,0,0" enabled="true" width="300" height="100" relativepos="50,50,0,0" textpadding="2,0,2,0" font="4" align="wrap" />
+						<Text text="动态链接库封装、UI设计：刘菲菲" float="true" pos="18,200,0,0" enabled="true" width="300" height="100" relativepos="50,50,0,0" textpadding="2,0,2,0" font="4" align="wrap" />
+						<Text text="UI实现：觉得自己要秃顶的谷璧芹" float="true" pos="18,300,0,0" enabled="true" width="300" height="100" relativepos="50,50,0,0" textpadding="2,0,2,0" font="4" align="wrap" />
+					</HorizontalLayout>
+				</TabLayout>
+			</VerticalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

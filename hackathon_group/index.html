@@ -1,0 +1,219 @@
+    <!DOCTYPE html>  
+    <html>  
+    <head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>show</title>  
+      
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->  
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <!--link rel="stylesheet" href="css/bottstrap/css/bootstrap.min.css"--> 
+    <link rel="stylesheet" href="css/index.css"> 
+    <script type="text/javascript" src="js/login.js"></script>
+    <script src="css/bootstrap/js/jquery-3.2.1.js"></script>  
+    <!--link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"-->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->  
+    <script src="css/boootsrap/js/bootstrap.min.js"></script>  
+    <script type="text/javascript">
+        $(function login(){
+          $("#login-btn").click(function(){
+              /*$.ajax({
+                  type:"post";
+                  url:"js/login.php",
+                  data:{action:"login",username:$("#username-l").val()},
+                  dataType:"json",
+                  beforeSend:function(){("正在登录中...");},
+                  success:function(){
+                    if(data=='Fail'){
+                      alert("登陆失败！请重新输入")
+                    }
+                    else{
+                      alert("登陆成功！")
+                    }
+                  }
+                });*/
+                alert("XXXXXXXX");
+            });
+        });
+
+        $(function register(){
+            $("#register-btn").click(function(){
+                $.ajax({
+                    type:"post";
+                    url:"js/login.php",
+                    data:{action:"register",username:$("#username-r").val()},
+                    dataType:"jason",
+                    success:function(){
+                      if(data==Fail){
+                        alert("zhuce失败！请重新输入")
+                      }
+                      else{
+                        alert("zhuce成功！")
+                      }
+                    }
+                  })
+              });
+        });
+    </script>
+    <style>  
+        .container .items{border: 1px solid #EEEEEE;padding: 10px;margin-bottom: 15px;}
+    </style>  
+    </head>  
+    <body>  
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 5%">
+        <ul class="nav navbar-top-links navbar-right" style="margin-right: 18% ">
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register">注册</button>
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login">登录</button>
+        </ul>
+    </nav>
+    <!--motaikuang-->
+    <div class="modal fade" id="register" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-title">
+                    <h1 class="text-center">注册</h1>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group" action="">
+                        <div class="form-group">
+                            <label for="">用户名</label>
+                            <input id="username-r" class="form-control" type="text" name="id_register" placeholder="常用ID">
+                        </div>
+                        <div class="text-right">
+                            <button id="register-btn" class="btn btn-primary" type="submit">提交</button>
+                        </div>
+                        <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">登录</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="login" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-title">
+                    <h1 class="text-center">登录</h1>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group" action="">
+                        <div class="form-group">
+                            <label for="">用户名</label>
+                            <input id="username-l" class="form-control" type="text" name="id_login" placeholder="常用ID">
+                        </div>
+                        <div class="text-right">
+                            <button id="login-btn" class="btn btn-primary" type="submit">提交</button>
+                        </div>
+                        <a href="" data-toggle="modal" data-dismiss="modal" data-target="#register">注册</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenter">
+     <div class="row">
+        <div class="col-lg-2 col-md-1"></div>
+        <div class="col-lg-2 col-md-6" >
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-comments fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">ID</div>
+                            <div>keywords</div>
+                        </div>
+                    </div>
+                </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+            </div>
+        </div>
+            <div class="col-lg-2 col-md-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                            <i class="fa fa-tasks fa-5x"></i>
+                            </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">ID</div>
+                            <div>keywords</div>
+                        </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-shopping-cart fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">ID</div>
+                                    <div>keywords</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <div class="panel panel-red">
+                     <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-support fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                            <div class="huge">ID</div>
+                                <div>keywords</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-1"></div>
+        </div>
+    </div>      
+    </body>  
+    </html>  

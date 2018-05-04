@@ -1,0 +1,71 @@
+全部继承deque
+DeskTicket：柜台工作队列
+	finish:完成一人即将它从队首删除
+	push:有一个人排到了队尾
+	size:当前这个柜台有多少人
+	call:叫号
+	insert:有人插队了，将此人插入队首
+	erase:将此人从队列中删去，估计走了
+	find:找到num在这个柜台排第几位
+	empty:判断这个柜台有没有人
+	print:将这个柜台排了哪些人打印出来
+	pop_back:将最后一位的号码返回，并将这个队列最后一位删除
+
+LogUnit:消息事件类
+	包括号码、柜台号、发生事件
+Log：消息事件队列
+	push:把这个消息插入尾部
+	get:将这个事件处理完从队首删除
+	search:通过号码找到这个事件并输出号码、柜台号、发生事件，返回柜台号
+	print:打印这个号码的号码、柜台号、发生事件
+
+RsetTicket:余票队列
+	RestTicket:传入总共要添加多少票
+	get:出一枚余票即将票号从队首删去
+	expand:计算有多少票，可以添加票
+	push:队尾增加一个号码
+	rest:有多少余票
+	min_ticket_num:返回开始的票号，这里我们设定为100
+	max_ticket_num:返回队尾筒子的票号
+	empty:判断是否有票
+
+ResumeUnit:工作类
+	包括号码、事件
+Resume:工作汇总队列
+	push:将工作插入队尾
+	get:完成一个工作将此工作对象返回并从队首删除
+	print:打印工作队列里的号码和事件
+	empty:判断队列是否为空
+	size:判断队列里有多少工作事件
+
+queue_system:模拟队列工作系统
+Position:这个人的当前位置
+	Position:在几号柜台和排第几位
+	getDest:返回柜台号
+	getPosition:返回当前排第几位
+QueueSystem:整个工作系统合作
+    private:
+	余票对象rt
+	柜台工作对象数组dt
+	工作事件对象数组rsm
+	消息事件对象log
+    public:
+	NUM_OF_DESK:普通柜台4个
+	getTicket:出票系统，调用rt将此票从余票队列中删去，调用getDest()算出几号柜台，调用dt将这个票
+		  号从这个柜台队尾插入
+	getDest:算出这个票号该分配到几号柜台
+	backTicket:有人不要票，把票号从余票队列队尾插入
+	expand:将多出来的空间加入余票队列
+	call:柜台叫号
+	callNoResponse:叫号人不来，将这个柜台的号码从排队队首删除，三次叫不到，将此号码排到这个柜台
+		       队尾
+	insert:几号柜台插队，创建Position对象pos
+	exchange:几号票从From柜台转移到to柜台，先判断这个号码和这个柜台的大小，同时创建此事件的消息
+		 对象
+	query:返回位置对象，找到这个消息发生在哪个柜台，当柜台没找到（即无消息了），把这个票号传入
+	      这个柜台队尾
+	finish:将票号从柜台队首删除，将此事件加入工作事件队尾
+	rest:返回还有多少票
+	print:打印每个柜台有哪些票、打印工作事件、打印消息事件
+
+测试函数
